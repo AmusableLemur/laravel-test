@@ -20,10 +20,3 @@ Route::get("/login", array("as" => "login", "uses" => "SessionController@getLogi
 Route::post("/login", "SessionController@postLogin");
 Route::get("/logout", array("as" => "logout", "uses" => "SessionController@getLogout"));
 Route::get("/profile/{name?}", array("as" => "profile", "uses" => "ProfileController@getIndex"));
-
-Route::get("users", function()
-{
-    $users = User::all();
-
-    return View::make("users")->with("users", $users);
-});
