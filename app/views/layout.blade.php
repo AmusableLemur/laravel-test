@@ -50,32 +50,14 @@
                 <div class="navbar-collapse navbar-right collapse">
                     <ul class="nav navbar-nav">
                         @if (Auth::check())
-                            <li><a href="#">
-                                <i class="fa fa-globe"></i>
-                                0 Notifications
+                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-user"></i>
+                                    {{ $user->name }}
                             </a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-user fa-fw"></i>
-                                    Genghis Khan
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">
-                                        <i class="fa fa-user fa-fw"></i>
-                                        Profile
-                                    </a></li>
-                                    <li><a href="#">
-                                        <i class="fa fa-cogs fa-fw"></i>
-                                        Settings
-                                    </a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="{{ route("logout") }}">
-                                        <i class="fa fa-sign-out fa-fw"></i>
-                                        Log out
-                                    </a></li>
-                                </ul>
-                            </li>
+                            <li><a href="{{ route("logout") }}">
+                                <i class="fa fa-sign-out fa-fw"></i>
+                                Log out
+                            </a></li>
                         @else
                             <li><a href="{{ route("register") }}">
                                 <i class="fa fa-pencil"></i>
