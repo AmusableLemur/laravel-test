@@ -11,8 +11,9 @@
 |
 */
 
-Route::get("/", array("as" => "home", "uses" => "HomeController@getIndex"));
+Route::controller("password", "RemindersController");
 
+Route::get("/", array("as" => "home", "uses" => "HomeController@getIndex"));
 Route::get("/register", array("as" => "register", "uses" => "RegisterController@getIndex"));
 Route::post("/register", "RegisterController@postIndex");
 Route::get("/login", array("as" => "login", "uses" => "SessionController@getLogin"));
