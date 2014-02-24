@@ -5,7 +5,8 @@ class RegisterController extends BaseController
     public static $rules = array(
         "name" => "required|alpha_num",
         "password" => "required|min:6|confirmed",
-        "password_confirmation" => "required"
+        "password_confirmation" => "required",
+        "rules" => "required"
     );
 
     protected $user;

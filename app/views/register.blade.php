@@ -18,6 +18,10 @@
             {{ Form::label("password_confirmation", "Bekräfta lösenord") }}
             {{ Form::password("password_confirmation", array("class" => "form-control", "placeholder" => "Bekräfta lösenord")) }}
         </div>
+        <label class="checkbox">
+            {{ Form::checkbox("rules") }}
+            Jag har läst och accepterar reglerna
+        </label>
         {{ Form::submit("Registrera", array("class" => "btn btn-large btn-default form-control")) }}
     {{ Form::close() }}
 @stop
