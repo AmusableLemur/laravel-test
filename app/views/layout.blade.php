@@ -51,7 +51,7 @@
                     <ul class="nav navbar-nav">
                         @if (Auth::check())
                             <li><a href="{{ route("profile") }}">
-                                    <i class="fa fa-user"></i>
+                                    <i class="fa fa-user fa-fw"></i>
                                     {{ Auth::user()->name }}
                             </a></li>
                             <li><a href="{{ route("logout") }}">
@@ -60,11 +60,11 @@
                             </a></li>
                         @else
                             <li><a href="{{ route("register") }}">
-                                <i class="fa fa-pencil"></i>
+                                <i class="fa fa-pencil fa-fw"></i>
                                 Registrera
                             </a></li>
                             <li><a href="{{ route("login") }}">
-                                <i class="fa fa-sign-in"></i>
+                                <i class="fa fa-sign-in fa-fw"></i>
                                 Logga in
                             </a></li>
                         @endif
