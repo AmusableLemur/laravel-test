@@ -10,6 +10,10 @@
             {{ Form::label("password", "Lösenord") }}
             {{ Form::password("password", array("class" => "form-control", "placeholder" => "Lösenord")) }}
         </div>
+        <label class="checkbox">
+            {{ Form::checkbox("remember_me") }}
+            Logga in automatiskt
+        </label>
         {{ Form::submit("Logga in", array("class" => "btn btn-large btn-default form-control")) }}
     {{ Form::close() }}
 @stop

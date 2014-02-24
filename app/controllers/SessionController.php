@@ -16,7 +16,7 @@ class SessionController extends BaseController
 
     public function postLogin()
     {
-        if (Auth::attempt(array("name" => Input::get("name"), "password" => Input::get("password")))) {
+        if (Auth::attempt(array("name" => Input::get("name"), "password" => Input::get("password")), Input::get("remember_me"))) {
             return Redirect::intended("/")
                 ->with("message", "Inloggad!");
         }
