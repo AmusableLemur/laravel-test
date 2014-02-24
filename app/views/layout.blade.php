@@ -50,7 +50,7 @@
                 <div class="navbar-collapse navbar-right collapse">
                     <ul class="nav navbar-nav">
                         @if (Auth::check())
-                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <li><a href="{{ route("profile") }}">
                                     <i class="fa fa-user"></i>
                                     {{ Auth::user()->name }}
                             </a></li>
