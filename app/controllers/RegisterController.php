@@ -9,6 +9,10 @@ class RegisterController extends BaseController
         "rules" => "required"
     );
 
+    public static $messages = array(
+        "required" => "Alla fält måste vara ifyllda"
+    );
+
     protected $user;
 
     public function __construct(User $user)
@@ -24,7 +28,7 @@ class RegisterController extends BaseController
 
     public function postIndex()
     {
-        $validator = Validator::make(Input::all(), self::$rules);
+        $validator = Validator::make(Input::all(), self::$rules, self::$messages);
 
         if ($validator->passes()) {
             $user = new User;
