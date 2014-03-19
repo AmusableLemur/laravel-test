@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Destruktiv</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    {{ HTML::style("//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css") }}
+    {{ HTML::style("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")}}
     <style>
         body {
             padding-top: 70px;
