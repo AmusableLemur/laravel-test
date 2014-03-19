@@ -6,29 +6,7 @@
     <title>Destruktiv</title>
     {{ HTML::style("//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css") }}
     {{ HTML::style("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")}}
-    <style>
-        body {
-            padding-top: 70px;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        .profile-image-wall {
-            margin-right: 10px;
-            height: 70px;
-            width: 70px;
-        }
-
-        .status {
-            margin-bottom: 20px;
-        }
-
-        .update-status {
-            min-height: 3em;
-        }
-    </style>
+    {{ HTML::style("/css/style.css") }}
 </head>
 
 <body>
